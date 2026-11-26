@@ -7,10 +7,12 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+// The entry: one word for an internet built on unpaid work.
 const ENTRY = "Unpaid";
 
-// Guard the gate: the entry must stay inside its character cap.
-if (ENTRY.length < 1 || ENTRY.length > 30 || !ENTRY.trim()) {
+// Guard the gate: the entry must stay inside its character cap and stay
+// a single line, since the judge reads exactly one line.
+if (ENTRY.length < 1 || ENTRY.length > 30 || !ENTRY.trim() || ENTRY.includes('\n')) {
   throw new Error(`entry is ${ENTRY.length} characters, cap is 30`);
 }
 
