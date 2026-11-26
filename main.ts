@@ -8,6 +8,8 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 // The entry: one word for an internet built on unpaid work.
+// It has to land in one beat: funny by itself, true of the whole
+// internet, and not the first obvious word anyone would reach for.
 const ENTRY = "Unpaid";
 
 // Guard the gate: the entry must stay inside its character cap and stay
